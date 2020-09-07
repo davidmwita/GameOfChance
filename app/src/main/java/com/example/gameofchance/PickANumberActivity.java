@@ -27,14 +27,14 @@ public class PickANumberActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_a_number);
 
-        //get player from main
+        //get player instance
         final Player player = Player.getInstance();
 
         //init views
         seekBar      = findViewById(R.id.seekBar);
         progressText = findViewById(R.id.progressText);
-        resultText   = findViewById(R.id.resultText);
-        gameInfoText = findViewById(R.id.gameInfoText);
+        resultText   = findViewById(R.id.resultsTextPAN);
+        gameInfoText = findViewById(R.id.gameInfoTextPAN);
         rollButton   = findViewById(R.id.rollButton);
 
         String text = "Simply pick a number between " + min + " and " + max + ", and if you pick " +
@@ -73,7 +73,7 @@ public class PickANumberActivity extends AppCompatActivity {
         }
 
         Random rand = new Random();
-        int winningNum = rand.nextInt(20) + 1;
+        int winningNum = rand.nextInt(max) + 1;
 
         if (guess != winningNum) {
             String string = "Sorry! The winning number is " + winningNum;

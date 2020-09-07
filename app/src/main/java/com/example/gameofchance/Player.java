@@ -39,10 +39,6 @@ public class Player extends Application{
         return 100;
     }
 
-    public int getDefaultHighScore() {
-        return 0;
-    }
-
     public boolean deductCost() {
         if (credits >= cost) {
             credits -= cost;

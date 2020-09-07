@@ -2,7 +2,6 @@ package com.example.gameofchance;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +21,7 @@ public class OptionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
-        //get player from main
+        //get player instance
         final Player player = Player.getInstance();
 
 
@@ -48,6 +47,13 @@ public class OptionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(OptionsActivity.this, PickANumberActivity.class));
+            }
+        });
+
+        noMatchDealerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OptionsActivity.this, NoMatchDealerActivity.class));
             }
         });
 
