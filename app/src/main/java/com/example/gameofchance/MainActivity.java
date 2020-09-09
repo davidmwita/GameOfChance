@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     EditText nameText;
     Button playButton;
 
+    //TODO: in user input events -> make sure you handle all possibilities
+    //TODO: write test cases for the program
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

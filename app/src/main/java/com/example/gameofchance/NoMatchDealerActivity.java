@@ -13,8 +13,10 @@ import java.util.Random;
 public class NoMatchDealerActivity extends AppCompatActivity {
 
     // local vars
+    Player player;
     int size = 16, min = 0, max = 99; //size = number of randInts; min & max are range of ints.
     int[] array;
+
     //views
     TextView gameInfoText, wagerText, dealingText, numbersText, resultsText;
     EditText wagerAmountText;
@@ -26,19 +28,19 @@ public class NoMatchDealerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_no_match_dealer);
 
         //get player instance
-        final Player player = Player.getInstance();
+        player = Player.getInstance();
 
         //init array
         array = new int[size];
 
         //init views
         gameInfoText    = (TextView) findViewById(R.id.gameInfoTextNMD);
-        wagerText       = (TextView) findViewById(R.id.wagerText);
-        dealingText     = (TextView) findViewById(R.id.dealingText);
+        wagerText       = (TextView) findViewById(R.id.wagerTextNMD);
+        dealingText     = (TextView) findViewById(R.id.dealingTextNMD);
         numbersText     = (TextView) findViewById(R.id.numbersText);
         resultsText     = (TextView) findViewById(R.id.resultsTextNMD);
-        wagerAmountText = (EditText) findViewById(R.id.wagerAmountText);
-        dealButton      = (Button) findViewById(R.id.dealButton);
+        wagerAmountText = (EditText) findViewById(R.id.wagerAmountTextNMD);
+        dealButton      = (Button) findViewById(R.id.dealButtonNMD);
 
         String gameText = "In this game, you can wager up to all of your credits. \n" +
                 "The dealer will deal out " + size + " random numbers between " + min + " and " +

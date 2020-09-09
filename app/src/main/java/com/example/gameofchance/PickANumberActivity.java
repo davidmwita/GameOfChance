@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class PickANumberActivity extends AppCompatActivity {
     //local vars
+    Player player;
     final int reward = 100;
 
     //views
@@ -28,7 +29,7 @@ public class PickANumberActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pick_a_number);
 
         //get player instance
-        final Player player = Player.getInstance();
+        player = Player.getInstance();
 
         //init views
         seekBar      = findViewById(R.id.seekBar);
@@ -58,14 +59,14 @@ public class PickANumberActivity extends AppCompatActivity {
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                play(player, seekBar.getProgress());
+                play(seekBar.getProgress());
             }
         });
 
     }
 
 
-    private void play(Player player, int guess) {
+    private void play(int guess) {
         if (!player.deductCost()) {
             String text = "Sorry! You are out of credits.";
             resultText.setText(text);

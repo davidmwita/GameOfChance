@@ -23,7 +23,7 @@
         tools:text="gameInfoText" />
 
     <TextView
-        android:id="@+id/wagerText"
+        android:id="@+id/wagerTextNMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -39,7 +39,7 @@
         tools:text="wagerText" />
 
     <EditText
-        android:id="@+id/wagerAmountText"
+        android:id="@+id/wagerAmountTextNMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -52,11 +52,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wagerText"
+        app:layout_constraintTop_toBottomOf="@+id/wagerTextNMD"
         tools:text="wagerAmountText" />
 
     <TextView
-        android:id="@+id/dealingText"
+        android:id="@+id/dealingTextNMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -67,7 +67,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dealButton"
+        app:layout_constraintTop_toBottomOf="@+id/dealButtonNMD"
         tools:text="dealingText" />
 
     <TextView
@@ -82,7 +82,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dealingText"
+        app:layout_constraintTop_toBottomOf="@+id/dealingTextNMD"
         tools:text="numbersText" />
 
     <TextView
@@ -101,7 +101,7 @@
         tools:text="resultsTextNMD" />
 
     <Button
-        android:id="@+id/dealButton"
+        android:id="@+id/dealButtonNMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -112,6 +112,6 @@
         android:text="deal me in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wagerAmountText" />
+        app:layout_constraintTop_toBottomOf="@+id/wagerAmountTextNMD" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

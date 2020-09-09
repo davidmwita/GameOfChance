@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class OptionsActivity extends AppCompatActivity {
 
     //views
+    Player player;
     TextView nameDisplayText, newsText, instructionText;
 
     //buttons
@@ -22,7 +23,7 @@ public class OptionsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_options);
 
         //get player instance
-        final Player player = Player.getInstance();
+        player = Player.getInstance();
 
 
         //init views
@@ -42,6 +43,13 @@ public class OptionsActivity extends AppCompatActivity {
         noMatchDealerButton = findViewById(R.id.noMatchDealerButton);
         creditsButton       = findViewById(R.id.creditsButton);
         resetButton         = findViewById(R.id.resetButton);
+
+        findTheAceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OptionsActivity.this, FindTheAceActivity.class));
+            }
+        });
 
         pickANumberButton.setOnClickListener(new View.OnClickListener() {
             @Override
